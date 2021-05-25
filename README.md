@@ -1,5 +1,5 @@
 # GodsEye
-## App for the Blind to see the world through their phones cam , and get audio feedback 
+## App for the Blind to see the world through their phone's camera , and get audio feedback 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
