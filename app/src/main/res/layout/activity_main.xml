@@ -6,13 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <Button
+    android:id="@+id/btn_ocr"
+    style="@style/main_activity_btn_style"
+    android:layout_marginEnd="160dp"
+    android:layout_marginBottom="40dp"
+    android:text="@string/str_ocr"
+    app:layout_constraintBottom_toTopOf="@+id/btn_curr"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_curr"
+        style="@style/main_activity_btn_style"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/str_currency"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ocr_setting"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_ocr_setting"
+        style="@style/main_activity_btn_style"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="52dp"
+        android:text="@string/str_settings"
+        app:layout_constraintBottom_toTopOf="@+id/imb_face"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/imb_face"
+        style="@style/main_activity_btn_style"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
