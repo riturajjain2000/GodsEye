@@ -6,16 +6,16 @@
     android:layout_height="match_parent"
     android:keepScreenOn="true">
 
-    <com.example.controller.app.ocr.CameraSourcePreview
+    <com.project.godseye.app.ocr.CameraSourcePreview
         android:id="@+id/preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.example.controller.app.ocr.GraphicOverlay
+        <com.project.godseye.app.ocr.GraphicOverlay
             android:id="@+id/graphicOverlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-    </com.example.controller.app.ocr.CameraSourcePreview>
+    </com.project.godseye.app.ocr.CameraSourcePreview>
 
 </LinearLayout>
