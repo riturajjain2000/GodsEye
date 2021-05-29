@@ -1,11 +1,13 @@
 package com.project.godseye.app;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.Switch;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 //TODO : may add FPS or Preview size too
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {

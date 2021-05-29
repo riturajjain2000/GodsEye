@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,42 +7,17 @@
     android:background="@color/bg_color"
     tools:context="com.project.godseye.app.MainActivity">
 
-
-    <Button
-        android:id="@+id/btn_ocr"
-        style="@style/main_activity_btn_style"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/str_ocr"
-        app:layout_constraintBottom_toTopOf="@+id/btn_curr"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/btn_curr"
-        style="@style/main_activity_btn_style"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="32dp"
-        android:text="@string/str_currency"
-        app:layout_constraintBottom_toTopOf="@+id/btn_ocr_setting"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/btn_ocr_setting"
-        style="@style/main_activity_btn_style"
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="52dp"
-        android:text="@string/str_settings"
-        app:layout_constraintBottom_toTopOf="@+id/imb_face"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/imb_face"
-        style="@style/main_activity_btn_style"
-        android:visibility="invisible"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/main_text"
+        android:id="@+id/main_tv"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

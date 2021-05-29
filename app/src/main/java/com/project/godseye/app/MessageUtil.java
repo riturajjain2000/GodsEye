@@ -1,10 +1,12 @@
 package com.project.godseye.app;
 
 import android.content.Context;
-import android.support.annotation.StringRes;
-import android.support.design.widget.Snackbar;
+import androidx.annotation.StringRes;
+
 import android.view.View;
 import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 public class MessageUtil {
     static void toast(Context ctx, String msg) {
