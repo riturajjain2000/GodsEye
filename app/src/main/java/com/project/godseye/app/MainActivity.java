@@ -1,7 +1,9 @@
 package com.project.godseye.app;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.speech.tts.TextToSpeech;
 
 import android.util.Log;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int CHECK_TTS_CODE = 10;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.e(TAG, LogUtil.prependCallLocation("onCreate: "));
@@ -28,16 +31,22 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(checkTTSIntent, CHECK_TTS_CODE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        long[] pattern = {0, 500, 5000};
+        vib.vibrate(pattern, 1);
 
         TextView main_tv=findViewById(R.id.main_tv);
+
 
         main_tv.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, OcrCaptureActivity.class);
             startActivity(intent);
+
         });
         main_tv.setOnLongClickListener(v -> {
             Intent i = new Intent(MainActivity.this, ClassifierActivity.class);
             startActivity(i);
+
            return true;
         });
 
