@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.e(TAG, LogUtil.prependCallLocation("onCreate: "));
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(checkTTSIntent, CHECK_TTS_CODE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         long[] pattern = {0, 500, 5000};
         vib.vibrate(pattern, 1);

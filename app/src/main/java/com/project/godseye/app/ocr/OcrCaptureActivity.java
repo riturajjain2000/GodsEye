@@ -44,7 +44,6 @@ import com.project.godseye.app.CTextToSpeech;
 import com.project.godseye.app.LogUtil;
 import com.project.godseye.app.PreferenceManager;
 import com.project.godseye.app.R;
-import com.project.godseye.app.TextManagerActivity;
 import com.project.godseye.app.TextBlockUtil;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
@@ -339,25 +338,6 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                 tts.speak(text);
             }
             return true;
-        }
-
-        @Override
-        public void onLongPress(MotionEvent e) {
-            if(mDetectorProcessor!=null) {
-                String printText = null;
-                if(multiColumn) {
-                    printText = TextBlockUtil.getString(mDetectorProcessor.textBlockSparseArray, false);
-                }
-                String textToSpeak = TextBlockUtil.getString(mDetectorProcessor.textBlockSparseArray, multiColumn);
-                Log.e(TAG, LogUtil.prependCallLocation("onLongPress: "+textToSpeak ));
-                Intent intent = new Intent(getApplicationContext(), TextManagerActivity.class);
-                intent.putExtra(TextManagerActivity.tagPrintText, printText);
-                intent.putExtra(TextManagerActivity.tagSpeakText, textToSpeak);
-                intent.putExtra(TextManagerActivity.tagLangCode, langCode);
-                finish();
-                startActivity(intent);
-
-            }
         }
     }
 
