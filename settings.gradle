@@ -1,1 +1,2 @@
-include ':app'
+rootProject.name = 'GodsEye'
+include ':app',':lib_interpreter', ':lib_task_api'
