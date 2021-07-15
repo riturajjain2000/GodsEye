@@ -23,8 +23,20 @@ android {
     }
 }
 
+// import DownloadModels task
+project.ext.ASSET_DIR = projectDir.toString() + '/src/main/assets'
+project.ext.TMP_DIR   = project.buildDir.toString() + '/downloads'
+
+// Download default models; if you wish to use your own models then
+// place them in the "assets" directory and comment out this line.
+apply from:'download_model.gradle'
+apply from:'download_model.gradle'
+apply from:'download_model.gradle'
+apply from:'download_model.gradle'
+apply from:'download_model.gradle
+
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar','*.aar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.3.0'
     implementation 'com.google.android.gms:play-services-vision:20.1.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
@@ -36,4 +48,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'androidx.exifinterface:exifinterface:1.3.2'
+
+
+
+    // added MLKit dependencies for face detector
+    implementation 'com.google.mlkit:face-detection:16.1.0'
 }
