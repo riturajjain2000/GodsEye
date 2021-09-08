@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!DOCTYPE resources [
-    <!ENTITY ocr "OCR">
-    <!ENTITY curr "Currency">
-    <!ENTITY trans "Translate">
-    ]>
+<!DOCTYPE resources [<!ENTITY ocr "OCR"><!ENTITY curr "Currency"><!ENTITY trans "Translate">]>
 <resources>
     <string name="app_name">GodsEye</string>
     <string name="str_ocr">&ocr;</string>
@@ -54,23 +50,23 @@
     <string name="str_done">Done</string>
     <string name="str_edit">Edit</string>
     <string name="str_speak">Speak</string>
-    <string name="str_hlp_ocr" >
+    <string name="str_hlp_ocr">
     Recognize Text :\n
     1.Tap &ocr; button on Main Screen\n
     2.Tap to listen text in the front of camera and Long Press to manage the text
     </string>
-    <string name="str_hlp_curr" >
+    <string name="str_hlp_curr">
     Recognize Currency :\n
     1.Tap &curr; button on Main Screen\n
     2.Tap to listen detected currency
     </string>
-    <string name="str_hlp_trans" >
+    <string name="str_hlp_trans">
     Translate Text :\n
     1.Tap &trans; button on Main Screen\n
     2.Select target language from the target language spinner\n
     3.Tap on &trans; button on the bottom to start translation
     </string>
-    <string name="str_hlp_txt_man" >
+    <string name="str_hlp_txt_man">
     Text Manager:\n
     Select options in the bottom of the screen to manage text
     </string>
