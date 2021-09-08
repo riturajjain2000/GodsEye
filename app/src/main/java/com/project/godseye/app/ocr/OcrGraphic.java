@@ -34,7 +34,7 @@ public class OcrGraphic extends GraphicOverlay.Graphic {
     private static final String TAG = OcrGraphic.class.getSimpleName();
     private int mId;
 
-    private static final int TEXT_COLOR = Color.GREEN;
+    private static final int TEXT_COLOR = Color.RED;
 
 //    private static Paint sRectPaint;
     private static Paint sTextPaint;
