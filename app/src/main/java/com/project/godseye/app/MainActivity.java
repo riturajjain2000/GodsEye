@@ -7,8 +7,10 @@ import android.os.Vibrator;
 import android.speech.tts.TextToSpeech;
 
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -34,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        long[] pattern = {0, 500, 5000};
-        vib.vibrate(pattern, 1);
+
+        vib.vibrate(500);
 
         TextView main_tv=findViewById(R.id.main_tv);
 
@@ -46,11 +48,38 @@ public class MainActivity extends AppCompatActivity {
 
         });
         main_tv.setOnLongClickListener(v -> {
-            Intent i = new Intent(MainActivity.this, ClassifierActivity.class);
-            startActivity(i);
+
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage("org.tensorflow.lite.examples.detection");
+            startActivity( launchIntent );
 
            return true;
         });
+
+        main_tv.setOnTouchListener(new OnSwipeTouchListener() {
+
+
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage("org.tensorflow.lite.examples.classification");
+            public boolean onSwipeTop() {
+                startActivity( launchIntent );
+                return true;
+            }
+            public boolean onSwipeRight() {
+                startActivity( launchIntent );
+                return true;
+            }
+            public boolean onSwipeLeft() {
+                startActivity( launchIntent );
+                return true;
+            }
+            public boolean onSwipeBottom() {
+                startActivity( launchIntent );
+                return true;
+            }
+
+
+        });
+
+
 
 
         //findViewAndSetThisAsOnClickListener(R.id.btn_ocr, R.id.btn_curr,R.id.btn_ocr_setting);
